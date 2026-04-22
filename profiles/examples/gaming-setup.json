@@ -1,0 +1,17 @@
+{
+  "name": "Gaming Setup",
+  "description": "All the essentials for a gaming PC",
+  "version": "1.0.0",
+  "created_at": "2026-04-23T01:00:00Z",
+  "platform": "windows",
+  "apps": [
+    { "id": "Valve.Steam", "category": "Gaming" },
+    { "id": "EpicGames.EpicGamesLauncher", "category": "Gaming" },
+    { "id": "Discord.Discord", "category": "Communication" },
+    { "id": "Google.Chrome", "category": "Browsers" },
+    { "id": "Spotify.Spotify", "category": "Media" },
+    { "id": "7zip.7zip", "category": "Utilities" },
+    { "id": "Nvidia.GeForceExperience", "category": "Drivers" }
+  ],
+  "post_install_scripts": []
+}
