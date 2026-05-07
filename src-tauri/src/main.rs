@@ -2,5 +2,5 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
 fn main() {
-    packpilot_temp_lib::run()
+    packpilot_lib::run()
 }

@@ -29,5 +29,9 @@ src-tauri/target/
 *.sln
 *.sw?
 
+# Test artifacts
+test_parser
+test_parser.rs
+
 # Issue body temp files
 .github/issue_bodies/

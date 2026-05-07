@@ -1,17 +1,15 @@
 {
-  "name": "Gaming Setup",
-  "description": "All the essentials for a gaming PC",
-  "version": "1.0.0",
-  "created_at": "2026-04-23T01:00:00Z",
+  "name": "Gamer Starter Pack",
+  "description": "Essential gaming tools — launcher, voice chat, streaming, and performance tools",
+  "created_at": "2026-05-07T00:00:00Z",
   "platform": "windows",
   "apps": [
-    { "id": "Valve.Steam", "category": "Gaming" },
-    { "id": "EpicGames.EpicGamesLauncher", "category": "Gaming" },
-    { "id": "Discord.Discord", "category": "Communication" },
-    { "id": "Google.Chrome", "category": "Browsers" },
-    { "id": "Spotify.Spotify", "category": "Media" },
-    { "id": "7zip.7zip", "category": "Utilities" },
-    { "id": "Nvidia.GeForceExperience", "category": "Drivers" }
-  ],
-  "post_install_scripts": []
+    { "id": "Valve.Steam", "name": "Steam", "source": "winget", "category": "Gaming" },
+    { "id": "EpicGames.EpicGamesLauncher", "name": "Epic Games Launcher", "source": "winget", "category": "Gaming" },
+    { "id": "Discord.Discord", "name": "Discord", "source": "winget", "category": "Communication" },
+    { "id": "OBSProject.OBSStudio", "name": "OBS Studio", "source": "winget", "category": "Media" },
+    { "id": "VideoLAN.VLC", "name": "VLC", "source": "winget", "category": "Media" },
+    { "id": "7zip.7zip", "name": "7-Zip", "source": "winget", "category": "Utilities" },
+    { "id": "Google.Chrome", "name": "Google Chrome", "source": "winget", "category": "Browsers" }
+  ]
 }

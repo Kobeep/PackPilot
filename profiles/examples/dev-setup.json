@@ -1,31 +1,24 @@
 {
-  "name": "Web Developer Setup",
-  "description": "Complete web development environment with all essential tools",
-  "version": "1.0.0",
-  "created_at": "2026-04-23T01:00:00Z",
+  "name": "Web Developer Essentials",
+  "description": "A complete web development setup with browser, editor, version control, containers, and API tools",
+  "created_at": "2026-05-07T00:00:00Z",
   "platform": "windows",
   "apps": [
-    { "id": "Google.Chrome", "category": "Browsers" },
-    { "id": "Mozilla.Firefox", "category": "Browsers" },
-    { "id": "Microsoft.VisualStudioCode", "category": "Development" },
-    { "id": "Git.Git", "category": "Development" },
-    { "id": "OpenJS.NodeJS.LTS", "category": "Development" },
-    { "id": "Docker.DockerDesktop", "category": "Development" },
-    { "id": "Postman.Postman", "category": "Development" },
-    { "id": "Microsoft.WindowsTerminal", "category": "Utilities" },
-    { "id": "Notepad++.Notepad++", "category": "Utilities" },
-    { "id": "Discord.Discord", "category": "Communication" },
-    { "id": "Slack.Slack", "category": "Communication" },
-    { "id": "Spotify.Spotify", "category": "Media" }
+    { "id": "Google.Chrome", "name": "Google Chrome", "source": "winget", "category": "Browsers" },
+    { "id": "Mozilla.Firefox", "name": "Firefox", "source": "winget", "category": "Browsers" },
+    { "id": "Microsoft.VisualStudioCode", "name": "Visual Studio Code", "source": "winget", "category": "Development" },
+    { "id": "Git.Git", "name": "Git", "source": "winget", "category": "Development" },
+    { "id": "Docker.DockerDesktop", "name": "Docker Desktop", "source": "winget", "category": "Development" },
+    { "id": "Postman.Postman", "name": "Postman", "source": "winget", "category": "Development" },
+    { "id": "OpenJS.NodeJS.LTS", "name": "Node.js LTS", "source": "winget", "category": "Development" },
+    { "id": "Figma.Figma", "name": "Figma", "source": "winget", "category": "Development" },
+    { "id": "Discord.Discord", "name": "Discord", "source": "winget", "category": "Communication" },
+    { "id": "SlackTechnologies.Slack", "name": "Slack", "source": "winget", "category": "Communication" }
   ],
   "post_install_scripts": [
     {
       "trigger_after": "Git.Git",
-      "script": "git config --global core.autocrlf true"
-    },
-    {
-      "trigger_after": "OpenJS.NodeJS.LTS",
-      "script": "npm install -g pnpm typescript"
+      "script": "git config --global core.autocrlf true && git config --global init.defaultBranch main"
     }
   ]
 }

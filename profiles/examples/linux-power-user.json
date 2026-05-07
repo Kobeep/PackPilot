@@ -1,0 +1,18 @@
+{
+  "name": "Linux Power User",
+  "description": "Essential Linux tools for developers and sysadmins",
+  "created_at": "2026-05-07T00:00:00Z",
+  "platform": "linux",
+  "apps": [
+    { "id": "com.google.Chrome", "name": "Google Chrome", "source": "flatpak", "category": "Browsers" },
+    { "id": "com.visualstudio.code", "name": "VS Code", "source": "flatpak", "category": "Development" },
+    { "id": "com.discordapp.Discord", "name": "Discord", "source": "flatpak", "category": "Communication" },
+    { "id": "org.videolan.VLC", "name": "VLC", "source": "flatpak", "category": "Media" },
+    { "id": "com.spotify.Client", "name": "Spotify", "source": "flatpak", "category": "Media" },
+    { "id": "org.gimp.GIMP", "name": "GIMP", "source": "flatpak", "category": "Media" },
+    { "id": "git", "name": "Git", "source": "dnf", "category": "Development" },
+    { "id": "vim", "name": "Vim", "source": "dnf", "category": "Development" },
+    { "id": "htop", "name": "htop", "source": "dnf", "category": "Utilities" },
+    { "id": "curl", "name": "curl", "source": "dnf", "category": "Utilities" }
+  ]
+}

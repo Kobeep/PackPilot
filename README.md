@@ -107,19 +107,23 @@ The installer will be generated in `src-tauri/target/release/bundle/`.
 ```
 PackPilot/
 ├── src/                    # React frontend
-│   ├── components/         # Reusable UI components
-│   ├── pages/              # Main application views
-│   ├── hooks/              # Custom React hooks
-│   ├── stores/             # State management
+│   ├── components/         # UI components (AppCard, SearchBar, Sidebar, InstallQueue, Toast)
+│   ├── stores/             # Zustand state management
 │   ├── types/              # TypeScript type definitions
-│   └── utils/              # Helper functions
+│   ├── assets/             # Static assets (icons, SVGs)
+│   ├── App.tsx             # Main application component
+│   ├── main.tsx            # Entry point
+│   └── index.css           # Global styles & Tailwind directives
 ├── src-tauri/              # Rust backend (Tauri)
 │   ├── src/
-│   │   ├── commands/       # Tauri command handlers
-│   │   ├── package_manager/# Winget integration layer
-│   │   └── models/         # Data models
+│   │   ├── lib.rs          # Tauri command handlers
+│   │   ├── models.rs       # Data models (AppModel)
+│   │   └── package_manager/# Platform abstraction layer
+│   │       ├── linux/      # DNF + Flatpak backends
+│   │       └── windows/    # Winget + Chocolatey backends
+│   ├── capabilities/       # Tauri permission definitions
 │   └── Cargo.toml
-├── docs/                   # Documentation & assets
+├── docs/                   # Documentation & architecture
 ├── profiles/               # Example import/export profiles
 └── package.json
 ```
