@@ -9,7 +9,9 @@ pub struct AppModel {
     pub version: String,
     pub category: Option<String>,
     pub icon_url: Option<String>,
-    pub source: String, // e.g., "dnf", "flatpak", "winget", "apt", "snap", "brew"
+    pub source: String,       // e.g., "dnf", "flatpak", "winget", "apt", "snap", "brew"
+    pub is_installed: bool,   // Whether the app is already installed on the system
+    pub is_verified: bool,    // Whether the app comes from a trusted/official source
 }
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
@@ -33,6 +35,7 @@ pub struct InstallRequest {
 }
 
 #[derive(Debug, Deserialize, Serialize, Clone)]
+#[allow(dead_code)]
 pub struct PostInstallScript {
     pub trigger_after: String,
     pub script: String,

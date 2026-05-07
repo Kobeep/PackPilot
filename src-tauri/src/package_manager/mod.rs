@@ -1,9 +1,10 @@
 use async_trait::async_trait;
 use crate::models::AppModel;
 
+#[cfg(target_os = "linux")]
 pub mod linux;
+#[cfg(target_os = "windows")]
 pub mod windows;
-
 #[cfg(target_os = "macos")]
 pub mod macos;
 
@@ -15,6 +16,8 @@ pub trait PackageManager: Send + Sync {
     async fn install(&self, app_id: &str) -> Result<(), String>;
     async fn uninstall(&self, app_id: &str) -> Result<(), String>;
     async fn list_upgradable(&self) -> Result<Vec<AppModel>, String>;
+    /// Returns a set of installed package IDs for this manager.
+    async fn list_installed(&self) -> Result<std::collections::HashSet<String>, String>;
 }
 
 pub fn get_available_managers() -> Vec<Box<dyn PackageManager>> {
