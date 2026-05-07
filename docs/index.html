@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PackPilot - Your autopilot for app installations. Select, install, and done in one click.">
+    <title>PackPilot | The Ultimate App Installer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-effects">
+        <div class="glow-orb blue"></div>
+        <div class="glow-orb violet"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="container nav-content">
+            <div class="logo-container">
+                <img src="assets/logo.png" alt="PackPilot Logo" class="logo-img">
+                <span class="logo-text">PackPilot</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="https://github.com/Kobeep/PackPilot" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container hero-content">
+            <div class="hero-text-block fade-in-up">
+                <div class="badge">🚀 Now in Development</div>
+                <h1 class="hero-title">Your <span class="text-gradient">Autopilot</span> for App Installations.</h1>
+                <p class="hero-subtitle">Stop downloading installers one by one. Select your favorite apps, hit install, and grab a coffee while PackPilot handles the rest.</p>
+                <div class="hero-actions">
+                    <a href="https://github.com/Kobeep/PackPilot/releases/latest" class="btn btn-primary glow-effect" id="download-btn">
+                        <span class="btn-icon">⚡</span> Download for Windows
+                    </a>
+                    <a href="https://github.com/Kobeep/PackPilot" class="btn btn-secondary">View Source</a>
+                </div>
+                <p class="version-info" id="version-text">Fetching latest release...</p>
+            </div>
+            <div class="hero-visual fade-in-up delay-1">
+                <div class="glass-panel app-preview">
+                    <img src="assets/logo.png" alt="App Preview" class="floating-logo">
+                    <div class="progress-bars">
+                        <div class="progress-track"><div class="progress-fill" style="width: 100%;"></div></div>
+                        <div class="progress-track"><div class="progress-fill" style="width: 75%;"></div></div>
+                        <div class="progress-track"><div class="progress-fill pulse" style="width: 45%;"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="features" class="features section">
+        <div class="container">
+            <h2 class="section-title text-center fade-in-up">Spectacular Features</h2>
+            <div class="features-grid">
+                <div class="feature-card glass-card fade-in-up delay-1">
+                    <div class="feature-icon">🖥️</div>
+                    <h3>One-Click Batch Install</h3>
+                    <p>Select dozens of apps—browsers, IDEs, media players—and install them all simultaneously without clicking "Next" 50 times.</p>
+                </div>
+                <div class="feature-card glass-card fade-in-up delay-2">
+                    <div class="feature-icon">🔍</div>
+                    <h3>Lightning Fast Search</h3>
+                    <p>Fuzzy search across the entire winget repository in real-time. Finding your apps has never been this fast.</p>
+                </div>
+                <div class="feature-card glass-card fade-in-up delay-3">
+                    <div class="feature-icon">💾</div>
+                    <h3>Shareable Profiles</h3>
+                    <p>Save your setup to a JSON file. Instantly recreate your entire development environment on a new machine.</p>
+                </div>
+                <div class="feature-card glass-card fade-in-up delay-1">
+                    <div class="feature-icon">🪶</div>
+                    <h3>Ultra Lightweight</h3>
+                    <p>Built on Tauri and Rust, PackPilot consumes less than 30MB of RAM and opens instantly.</p>
+                </div>
+                <div class="feature-card glass-card fade-in-up delay-2">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Bulk Updates</h3>
+                    <p>Scan all your installed applications and update everything with a single click. Stay secure automatically.</p>
+                </div>
+                <div class="feature-card glass-card fade-in-up delay-3">
+                    <div class="feature-icon">⚙️</div>
+                    <h3>Post-Install Scripts</h3>
+                    <p>Automate your setup further by running custom shell scripts right after your apps finish installing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Made with ❤️ by <a href="https://github.com/Kobeep" class="text-gradient">Kobeep</a></p>
+            <p class="copyright">PackPilot © 2026. Released under the MIT License.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -73,7 +73,7 @@ impl PackageManager for Apt {
             if line.starts_with("Listing") || line.is_empty() { continue; }
             let parts: Vec<&str> = line.split_whitespace().collect();
             if !parts.is_empty() {
-                let id = parts[0].splitn(2, '/').next().unwrap_or(parts[0]).to_string();
+                let id = parts[0].split('/').next().unwrap_or(parts[0]).to_string();
                 let version = if parts.len() > 1 { parts[1] } else { "Unknown" };
                 results.push(AppModel {
                     id: id.clone(), name: id, description: "Update available".to_string(),
