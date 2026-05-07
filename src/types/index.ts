@@ -8,6 +8,8 @@ export interface AppModel {
   category?: string;
   icon_url?: string;
   source: string;
+  is_installed: boolean;
+  is_verified: boolean;
 }
 
 /** Group of the same app from different sources (for deduplication). */
@@ -96,6 +98,7 @@ export interface AppSettings {
   maxConcurrentInstalls: number;
   searchDebounceMs: number;
   cacheExpiryMs: number;
+  verifiedOnly: boolean;
 }
 
 export const DEFAULT_SETTINGS: AppSettings = {
@@ -105,4 +108,5 @@ export const DEFAULT_SETTINGS: AppSettings = {
   maxConcurrentInstalls: 3,
   searchDebounceMs: 400,
   cacheExpiryMs: 5 * 60 * 1000, // 5 minutes
+  verifiedOnly: true, // Default to showing only verified/trusted apps
 };

@@ -382,6 +382,8 @@ export const useAppStore = create<AppState>((set, get) => ({
                 version: 'Latest',
                 category: app.category,
                 source: app.source || 'unknown',
+                is_installed: false,
+                is_verified: false,
               });
               newOrder.push(app.id);
               addedCount++;
